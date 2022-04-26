@@ -1,0 +1,64 @@
+/* fonts */
+
+/* open sans 300 400 700 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+/*roboto mono 300 400 700 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+:root {
+    --bg-lightblue: rgb(43, 50, 94);
+    --bg-darkblue: rgb(19, 23, 46);
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-weight:400;
+    background-color: var(--bg-darkblue);
+}
+.title {
+    padding:100px
+}
+.titletext {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 700;
+    transition: color 0.2s ease-in-out;
+}
+.titletext:hover {
+    color:yellow;
+}
+.blue-text {
+    color: blue;
+}
+.yellow-text {
+    color:yellow;
+}
+.center {
+    text-align:center;
+}
+.lighter-box {
+    margin:20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding:20px;
+    background-color: var(--bg-lightblue);
+    transition-property: margin-right, margin-left, background-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.lighter-box:hover {
+    margin-left: 38%;
+    margin-right: 38%;
+    background-color:white;
+    color: var(--bg-lightblue);
+}
+.lighter-box:hover .yellow-text {
+    color: blue;
+}
+.lighter-box:hover .ok-box {
+    color: blue;
+}
+
