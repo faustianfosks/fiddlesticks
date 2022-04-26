@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(26, 26, 48);  
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+body:active {
+    background-color: rgb(49, 34, 66);  
+  }
+.heart {
+    position: absolute; /* positioned relative to container(ancestor). values set dictate how far it is from the walls of its container -- later i set them all to 0, so it spans the entire body(its container)*/
+    margin: auto; /*automatically center w/in container */
+    background-color: rgb(78, 78, 255);
+    height: 50px;
+    width: 50px;
+    top:0; /* now since the edges of the element span the page, margin:auto centers it completely*/
+    bottom:0;
+    left:0;
+    right:0;
+    transform: rotate(-45deg);
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+.heart::before, 
+.heart::after {
+    background-color:inherit;
+    position:absolute;
+    content: "";
+    width:inherit;
+    height:inherit;
+    border-radius:50%;
+    transition-property: right, top;
+    transition-duration: 0.2s;
+}
+.heart::after {
+    right: -27px;
+}
+.heart::before {
+    top:-27px; /* now this top is relative to its container, the og heart. -30px away from its top means it's outside of its top. upwards.*/
+}
+.heart:active {
+    background-color: rgb(255, 0, 76);
+    width:100px;
+    height:100px;
+}
+.heart:active::after {
+    right: -44px;
+}
+.heart:active::before {
+    top: -44px;
+}
+
+
+
